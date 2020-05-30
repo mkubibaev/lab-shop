@@ -8,7 +8,7 @@ def index_view(request):
 
 
 def products_list_view(request):
-    products = Product.objects.all()
+    products = Product.objects.filter(count__gt=0).order_by('category', 'name')
     return render(request, 'products_list.html', context={'products': products})
 
 
