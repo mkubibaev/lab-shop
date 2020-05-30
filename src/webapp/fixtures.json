@@ -1,0 +1,42 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "Hamlet",
+    "description": "Some text about Hamlet book",
+    "category": "books",
+    "count": 5,
+    "price": "2.30"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "Milk",
+    "description": "Milk packet 1l",
+    "category": "food",
+    "count": 200,
+    "price": "1.20"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$jlD6GpTQ9wMS$fu7yBLoYeQCv+MSvLmODSMaG1zv+cU3XqiumZTY1kqw=",
+    "last_login": "2020-05-30T12:16:33.175Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-05-30T07:31:30.192Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
