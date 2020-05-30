@@ -6,8 +6,8 @@
     "name": "Hamlet",
     "description": "Some text about Hamlet book",
     "category": "books",
-    "count": 5,
-    "price": "2.30"
+    "amount": 2,
+    "price": "250.30"
   }
 },
 {
@@ -17,7 +17,7 @@
     "name": "Milk",
     "description": "Milk packet 1l",
     "category": "food",
-    "count": 200,
+    "amount": 20,
     "price": "1.20"
   }
 },

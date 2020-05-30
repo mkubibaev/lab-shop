@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Add product {% endblock %}
+
+{% block content %}
+    <h3>Add new product</h3>
+    <form action="{% url 'product_add' %}" method="post" novalidate>
+        {% include 'partial/product_add_edit_form.html' %}
+    </form>
+{% endblock %}
