@@ -12,6 +12,6 @@ def products_list_view(request):
     return render(request, 'products_list.html', context={'products': products})
 
 
-# def product_view(request, pk):
-#     product = get_object_or_404(Product, pk=pk)
-#     return render()
+def product_view(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    return render(request, 'product.html', context={'product': product})
