@@ -15,7 +15,9 @@
                             <span class="text-muted">Price: </span>
                             ${{ product.price }}
                         </p>
-                        <a href="{% url 'product' product.pk %}" class="card-link text-info">Details</a>
+                        <div class="text-right">
+                            <a href="{% url 'product' product.pk %}" class="card-link text-info">Details</a>
+                        </div>
                     </div>
                 </div>
             </div>

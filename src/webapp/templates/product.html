@@ -13,6 +13,9 @@
                 <span class="text-muted">Price: </span>
                 ${{ product.price }}
             </p>
+            <div class="text-right">
+                <a href="{% url 'product_edit' product.pk %}" class="card-link text-warning">Edit</a>
+            </div>
         </div>
     </div>
 {% endblock %}
