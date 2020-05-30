@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
-from webapp.forms import ProductForm
+from webapp.forms import ProductForm, SearchForm
 from webapp.models import Product
 
 
@@ -9,8 +9,14 @@ def index_view(request):
 
 
 def products_list_view(request):
-    products = Product.objects.filter(amount__gt=0).order_by('category', 'name')
-    return render(request, 'products_list.html', context={'products': products})
+    products = Product.objects.filter(amount__gt=0)
+    form = SearchForm(request.GET)
+    if form.is_valid():
+        search_query = form.cleaned_data['search']
+        if search_query:
+            products = products.filter(name__icontains=search_query)
+    products = products.order_by('category', 'name')
+    return render(request, 'products_list.html', context={'products': products, 'form': form})
 
 
 def product_view(request, pk):
