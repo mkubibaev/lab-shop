@@ -1,6 +1,6 @@
 from django.db import models
 
-CATEGORY_CHOICES = [('tech', 'Technology'), ('books', 'Books'), ('food', 'Food'), ('other', 'Other')]
+CATEGORY_CHOICES = [('other', 'Other'), ('tech', 'Technology'), ('books', 'Books'), ('food', 'Food')]
 
 
 class Product(models.Model):
@@ -9,4 +9,4 @@ class Product(models.Model):
     category = models.CharField(max_length=40, choices=CATEGORY_CHOICES, default=CATEGORY_CHOICES[0][0],
                                 verbose_name='Category')
     count = models.IntegerField(null=False, blank=False, verbose_name='Count')
-    price = models.DecimalField(null=False, blank=False, verbose_name='Price')
+    price = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, verbose_name='Price')
